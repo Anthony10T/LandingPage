@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Landing Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./votreavis.css">
+    </head>
+    <body>
+        <section>
+            <div class="main">
+                <div class="TopBar">
+                    <div class="LeftTopBar">
+                        <a href="../index.html" style="text-decoration: none;">
+                            <div class="Titre">
+                                <p class="TitreTop">#<span>Binationaux</span>2024</p>
+                                <p class="TitreBottom">ThinkTank</p>
+                            </div> 
+                        </a>
+                            
+                    </div>
+                    <div class="RightTopBar">
+                        <img src="../images/drapeauSenegale.png" alt="">
+                        <img src="../images/drapeauFrance.png" alt=""> 
+                    </div>
+                </div>
+                <div class="success2" height="auto">
+                    <div class="Boxvotreavis">
+                        <p class="votreavis">Votre <span class="NombreAdherents">avis</span> nous <span class="NombreAdherents">intéresse</span></p>
+                        <p class="DescriptionRecu">Cochez l'un des choix proposés</p>
+                    </div>
+                    
+                </div>
+                <div class="Formulaire">
+                    <form class="BoxFormulaire" method="post" id="sheetdb-form" action="https://sheetdb.io/api/v1/kk5lndxyczkh1?sheet=Avis">
+                        <p class="QuestionForm">Quelles sont les problématiques liées à la diaspora à traiter en priorité ? </p>
+                        <label for="" class="form-control">
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="La Corrution"> La Corrution
+                        </label>
+                        <label for="" class="form-control">
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="La Communication Gouvernementale"> La Communication Gouvernementale
+                        </label>
+                        <label for="" class="form-control">
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="Les Litiges Foncier"> Les Litiges Foncier
+                        </label>
+                        <label for="" class="form-control">
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="Le Financement"> Le Financement
+                        </label>
+                        <label for="" class="form-control">
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="Autre"> Autre
+                        </label>
+                        
+                        <p class="QuestionForm2">Avez-vous déja subi un litige foncier ?</p>
+                        <div class="Radio">
+                            <label for="" class="form-control2">
+                                <input class="Question2" type="radio" name="data[Avez-vous déja subi un litige foncier ?]" id="" value="Oui"> Oui
+                            </label>
+                            <label for="" class="form-control2">
+                                <input class="Question2" type="radio" name="data[Avez-vous déja subi un litige foncier ?]" id="" value="Non"> Non
+                            </label>
+                            
+                        </div>
+                        <button type="submit">
+                            Envoyer votre avis
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="Footer">
+                <div class="FooterContent">
+
+                    <div class="TopFooter">
+
+                        <div class="LeftFooterBar">
+                            <div class="TitreFooter">
+                                <p class="TitreTopFooter">#<span>Binationaux</span>2024</p>
+                                <p class="TitreBottomFooter">ThinkTank</p>
+                            </div>
+                        </div>
+                        
+                        <div class="Links">
+                            <a href="">Accueil</a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        
+        
+        <script src="./index.js" async defer></script>
+        <script>
+           var form = document.getElementById('sheetdb-form');
+           form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method : "POST",
+                body : new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                window.open('./SuccesAvis.html', '_self');
+            });
+           });
+        </script>
+        <script>
+            
+        const slider = document.querySelector(".items");
+		const slides = document.querySelectorAll(".item");
+		const button = document.querySelectorAll(".Slidebutton");
+
+		let current = 0;
+		let prev = 4;
+		let next = 1;
+
+		for (let i = 0; i < button.length; i++) {
+			button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
+		}
+
+		const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+
+		const gotoNext = () => current < 4 ? gotoNum(current + 1) : gotoNum(0);
+
+		const gotoNum = number => {
+			current = number;
+			prev = current - 1;
+			next = current + 1;
+
+			for (let i = 0; i < slides.length; i++) {
+				slides[i].classList.remove("active");
+				slides[i].classList.remove("prev");
+				slides[i].classList.remove("next");
+			}
+
+			if (next == 5) {
+				next = 0;
+			}
+
+			if (prev == -1) {
+				prev = 4;
+			}
+
+			slides[current].classList.add("active");
+			slides[prev].classList.add("prev");
+			slides[next].classList.add("next");
+		}
+        </script>
+    </body>
+</html>

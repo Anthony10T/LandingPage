@@ -1,0 +1,305 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'SourceSansPro';
+}
+
+
+.main {
+    background-color: #101010;
+}
+.TopBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.LeftTopBar{
+    width: 50%;
+    flex: 1;
+    text-align: left;
+    margin-left: 70px;
+}
+.Titre{
+    text-align: center;
+    width: 140px;
+}
+.RightTopBar{
+    width: 50%;
+    flex: 1;
+    text-align: right;
+    margin-right: 70px;
+}
+.RightTopBar img{
+    width: 30px;
+}
+.TitreTop{
+    color: green;
+}
+.TitreTop span{ 
+    color: white;
+}
+.TitreBottom{
+    color: white;
+    font-size: 10px;
+}
+
+/*****************************************************/
+/******************** Body Main **********************/
+/*****************************************************/
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('./Fonts/SourceSansPro-Bold.eot'); /* IE9 Compat Modes */
+    src: url('./Fonts/SourceSansPro-Bold.eot') format('embedded-opentype'), /* IE6-IE8 */
+         url('./Fonts/SourceSansPro-Bold.woff') format('woff'), /* Modern Browsers */
+         url('./Fonts/SourceSansPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('./Fonts/SourceSansPro-Bold.svg') format('svg'); /* Legacy iOS */
+  }
+
+.BodyMain {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    padding-top: 30px;
+}
+.BigText{
+    font-size: 80px;
+    color: white;
+    margin-bottom: 20px;
+}
+.SmallText{
+    font-size: 15px;
+    color: rgb(116, 116, 116);
+    margin-bottom: 70px;
+}
+.BtnAccederForm{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+    
+}
+.BtnAccederForm:hover{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(143, 143, 143);
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+}
+.BoxBodyMain{
+    padding: 70px;
+    width: 50%;
+}
+
+/*****************************************************/
+/********************** Footer ***********************/
+/*****************************************************/
+
+.Footer{
+    padding: 40px;
+}
+.FooterContent{
+    width:auto;
+}
+.TopFooter{
+    margin-bottom:20px;
+    display: flex;
+}
+.LeftFooterBar{
+    flex: 1;
+    width: 50%;
+    text-align: left;
+}
+.TitreFooter{
+    text-align: center;
+    width:150px;
+}
+.TitreTopFooter{
+    color: green;
+}
+.TitreTopFooter span{
+    color: black;
+}
+.Links a{
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.BoxMentionLegalSmall{
+    display: none;
+}
+
+.BoxMentionLegal{
+    margin-top: 20px;
+    display: flex;
+}
+.MentionLegal{
+    flex: 1;
+}
+.MentionLegal a{
+    color: rgb(116, 116, 116);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+    text-decoration-color: black;
+}
+.TextMention{
+    flex: 1;
+    text-align: center;
+    color: rgb(116, 116, 116);
+}
+.BoxIconeMentionLegal{
+    flex: 1;
+    text-align: right;
+}
+.Icone{
+    text-decoration: none;
+}
+.Icone img{
+    width:15px;
+    margin-left: 5px;
+}
+
+@media (max-width: 732px){
+    .BoxBodyMain {
+        padding: 70px;
+        width: 80%;
+    }
+    .BigText{
+        font-size: 12vw;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .SmallText {
+        font-size: 3vw;
+        color: rgb(116, 116, 116);
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 600px){
+    .RightTopBar {
+        width: 50%;
+        flex: 1;
+        text-align: right;
+        margin-right: 20px;
+    }
+    .LeftTopBar {
+        width: 50%;
+        flex: 1;
+        text-align: left;
+        margin-left: 20px;
+    }
+    .BoxBodyMain {
+        padding: 0px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        width: 90%;
+    }
+    .BigText{
+        font-size: 12vw;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .SmallText {
+        font-size: 3vw;
+        color: rgb(116, 116, 116);
+        margin-bottom: 70px;
+    }
+    .BtnAccederForm{
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 5px;
+        display: block;
+    }
+    .BtnAccederForm:hover{
+        text-decoration: none;
+        color: black;
+        background-color: rgb(143, 143, 143);
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 5px;
+        display: block;
+    }
+    .Footer {
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .TopFooter {
+        margin-bottom: 20px;
+        display: block;
+    }
+    .TitreFooter {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .LeftFooterBar {
+        width: 100%;
+        text-align: center;
+    }
+    .Links a {
+        color: black;
+        text-decoration: none;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .Links{
+        text-align: center;
+    }
+
+
+
+    .BoxMentionLegalSmall{
+        display: block;
+        margin-top: 20px;
+    }
+    .BoxTopMentionLegal{
+        display: flex;
+    }
+    
+    .BoxMentionLegal{
+        display: none;
+    }
+    .MentionLegalSmall{
+        flex: 1;
+    }
+    .MentionLegalSmall a{
+        color: rgb(116, 116, 116);
+        text-decoration-thickness: 3px;
+        text-underline-offset: 3px;
+        text-decoration-color: black;
+        font-size: 15px;
+    }
+    .TextMentionSmall{
+        margin-top: 20px;
+        font-size: 10px;
+        text-align: center;
+        color: rgb(116, 116, 116);
+    }
+    .BoxIconeMentionLegalSmall{
+        flex: 1;
+        text-align: right;
+    }
+    .Icone{
+        text-decoration: none;
+    }
+    .Icone img{
+        width:15px;
+        margin-left: 5px;
+    }
+}

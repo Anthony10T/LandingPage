@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Landing Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <section>
+            <div class="main">
+                <div class="TopBar">
+                    <div class="LeftTopBar">
+                        <div class="Titre">
+                            <p class="TitreTop">#<span>Binationaux</span>2024</p>
+                            <p class="TitreBottom">ThinkTank</p>
+                        </div>     
+                    </div>
+                    <div class="RightTopBar">
+                        <img src="./images/drapeauSenegale.png" alt="">
+                        <img src="./images/drapeauFrance.png" alt=""> 
+                    </div>
+                </div>
+                <div class="BodyMain">
+                    <div class="BoxBodyMain">
+                        <p class="BigText" id="words">Un Peuple</p>
+                        <p class="SmallText">Participons de manière structuré au développement du Sénégal en proposant des mesures innovantes !</p>
+                        <a class="BtnAccederForm" href="./Formulaire/Formulaire.html">Accéder au Formulaire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="Footer">
+                <div class="FooterContent">
+
+                    <div class="TopFooter">
+
+                        <div class="LeftFooterBar">
+                            <div class="TitreFooter">
+                                <p class="TitreTopFooter">#<span>Binationaux</span>2024</p>
+                                <p class="TitreBottomFooter">ThinkTank</p>
+                            </div>
+                        </div>
+                        
+                        <div class="Links">
+                            <a href="">Accueil</a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            (function(){
+                var words = [
+                    "Un Peuple",
+                    "Un But",
+                    "Une Foi"
+                ],
+                i = 0;
+                setInterval(function(){
+                    $('#words').fadeOut(function(){
+                        $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+                    });
+                }, 2000)
+            })();
+        </script>
+        
+        <script src="./index.js" async defer></script>
+    </body>
+</html>

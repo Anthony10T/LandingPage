@@ -1,0 +1,492 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'SourceSansPro';
+}
+
+
+.main {
+    background-color: #101010;
+    background-image: linear-gradient(to top, #09350073, #101010, #101010, #101010, #101010, #101010);
+}
+.TopBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.LeftTopBar{
+    width: 50%;
+    flex: 1;
+    text-align: left;
+    margin-left: 70px;
+}
+.Titre{
+    text-align: center;
+    width: 140px;
+}
+.RightTopBar{
+    width: 50%;
+    flex: 1;
+    text-align: right;
+    margin-right: 70px;
+}
+.RightTopBar img{
+    width: 30px;
+}
+.TitreTop{
+    color: green;
+}
+.TitreTop span{ 
+    color: white;
+}
+.TitreBottom{
+    color: white;
+    font-size: 10px;
+}
+
+/*****************************************************/
+/******************** Body Main **********************/
+/*****************************************************/
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('../Fonts/SourceSansPro-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../Fonts/SourceSansPro-Bold.eot') format('embedded-opentype'), /* IE6-IE8 */
+         url('../Fonts/SourceSansPro-Bold.woff') format('woff'), /* Modern Browsers */
+         url('../Fonts/SourceSansPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../Fonts/SourceSansPro-Bold.svg') format('svg'); /* Legacy iOS */
+  }
+
+.BodyMain {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 100px;
+    
+}
+.BoxLeftForm{
+    width: 46%;
+    text-align: left;
+}
+.BoxRightForm{
+    width: 45%;
+    text-align: left;
+}
+.ReponseObligatoire{
+    color: orangered;
+    font-size: 10px;
+}
+.TitreForm{
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 20px;
+    line-height:1;
+}
+.Input{
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 3px;
+    border-style: none;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    padding-left: 10px;
+}
+.PhoneNumber {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 3px;
+    border-style: none;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    padding-left: 67px;
+    position: relative;
+}
+.PhoneNumber::placeholder{
+    color: rgb(116, 116, 116);
+    padding-left: 10px;
+}
+.Input::placeholder{
+    color: rgb(116, 116, 116);
+    padding-left: 10px;
+}
+.InputPortable{
+    display: flex;
+    align-items: center;
+}
+.InputPortable select {
+    position: absolute;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    text-align: center;
+    font-size: 35px;
+    align-items: center;
+    border-radius: 100px;
+    PADDING: 0;
+}
+
+.InputPortable select option{
+    width:40px;
+}
+.titreInput{
+    color: white;
+    margin-bottom: 5px;
+}
+.RadioBtn {
+    display: flex;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.RadioBtn div input{
+    color: green; 
+}
+.RadioBtn div{
+    margin-right: 10px;
+    
+}
+.FormNom{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.Ville{
+    margin-bottom: 20px;
+}
+.Age{
+    margin-bottom: 20px;
+}
+.Email{
+    margin-bottom: 40px;
+}
+.Portable{
+    margin-bottom: 20px;
+}
+.Prenom{
+    width: 45%;
+}
+.Nom{
+    width: 45%;
+}
+.SpanInput{
+    color: orangered;
+}
+
+button{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+
+.BoxLeftForm{
+    width: 46%;
+    text-align: left;
+}
+.BoxRightForm{
+    width: 45%;
+    text-align: left;
+}
+
+.PhraseForm{
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 10px;
+    line-height: 50px;
+}
+.Description{
+    width: 70%;
+    color: rgb(116, 116, 116);
+}
+.SpanColor {
+    text-decoration: underline;
+    text-decoration-thickness: 20px;
+    text-underline-offset: -0.3em;
+    text-decoration-skip-ink: none;
+    text-decoration-color: green;
+}
+
+
+
+
+.BoxBodyMain{
+    padding: 70px;
+    width: 50%;
+}
+
+/*****************************************************/
+/********************** Footer ***********************/
+/*****************************************************/
+
+.Footer{
+    padding: 40px;
+}
+.FooterContent{
+    width:auto;
+}
+.TopFooter{
+    margin-bottom:20px;
+    display: flex;
+}
+.LeftFooterBar{
+    flex: 1;
+    width: 50%;
+    text-align: left;
+}
+.TitreFooter{
+    text-align: center;
+    width:150px;
+}
+.TitreTopFooter{
+    color: green;
+}
+.TitreTopFooter span{
+    color: black;
+}
+.Links a{
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.BoxMentionLegalSmall{
+    display: none;
+}
+
+.BoxMentionLegal{
+    margin-top: 20px;
+    display: flex;
+}
+.MentionLegal{
+    flex: 1;
+}
+.MentionLegal a{
+    color: rgb(116, 116, 116);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+    text-decoration-color: black;
+}
+.TextMention{
+    flex: 1;
+    text-align: center;
+    color: rgb(116, 116, 116);
+}
+.BoxIconeMentionLegal{
+    flex: 1;
+    text-align: right;
+}
+.Icone{
+    text-decoration: none;
+}
+.Icone img{
+    width:15px;
+    margin-left: 5px;
+}
+.Radio{
+    width:100%;
+    display:flex;
+    margin-bottom:20px;
+    color:white;
+}
+
+.BoxFormulaire button{
+    width:100%;
+    background-color: #101010;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-top:40px;
+    font-size: 20px;
+    border-style: none;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #101010;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid green;
+    border-radius: 50%;
+  }
+
+  .form-control {
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+  }
+
+  .form-control2 {
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    margin-right: 20px;
+  }
+
+  input[type="radio"] {
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+  }
+  
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em green;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+
+
+@media (max-width: 600px){
+    .RightTopBar {
+        width: 50%;
+        flex: 1;
+        text-align: right;
+        margin-right: 20px;
+    }
+    .LeftTopBar {
+        width: 50%;
+        flex: 1;
+        text-align: left;
+        margin-left: 20px;
+    }
+    .BoxLeftForm{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+    .BoxRightForm{
+        width: 100%;
+        text-align: left;
+    }
+    .BodyMain {
+        text-align: center;
+        align-items: center;
+        display: block;
+        justify-content: space-around;
+        padding-left: 70px;
+        padding-right: 70px;
+        padding-bottom: 100px;
+    }
+    input[type='radio']:checked:after {
+        width: 10px;
+        height: 10px;
+        border-radius: 15px;
+        position: relative;
+        background-color: none;
+        content: '';
+        color: red;
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid green;
+    }
+    .PhraseForm {
+        color: white;
+        font-size: 5vw;
+        margin-bottom: 10px;
+        line-height: 50px;
+    }
+    .TitreForm {
+        color: white;
+        font-size: 4vw;
+        margin-bottom: 20px;
+    }
+
+    
+    .Footer {
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .TopFooter {
+        margin-bottom: 20px;
+        display: block;
+    }
+    .TitreFooter {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .LeftFooterBar {
+        width: 100%;
+        text-align: center;
+    }
+    .Links a {
+        color: black;
+        text-decoration: none;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .Links{
+        text-align: center;
+    }
+
+
+
+    .BoxMentionLegalSmall{
+        display: block;
+        margin-top: 20px;
+    }
+    .BoxTopMentionLegal{
+        display: flex;
+    }
+    
+    .BoxMentionLegal{
+        display: none;
+    }
+    .MentionLegalSmall{
+        flex: 1;
+    }
+    .MentionLegalSmall a{
+        color: rgb(116, 116, 116);
+        text-decoration-thickness: 3px;
+        text-underline-offset: 3px;
+        text-decoration-color: black;
+        font-size: 15px;
+    }
+    .TextMentionSmall{
+        margin-top: 20px;
+        font-size: 10px;
+        text-align: center;
+        color: rgb(116, 116, 116);
+    }
+    .BoxIconeMentionLegalSmall{
+        flex: 1;
+        text-align: right;
+    }
+    .Icone{
+        text-decoration: none;
+    }
+    .Icone img{
+        width:15px;
+        margin-left: 5px;
+    }
+}

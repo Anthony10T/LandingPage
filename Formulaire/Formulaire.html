@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulaire</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./Formulaire.css">
+    </head>
+    <body>
+        <section>
+            <form action="https://sheetdb.io/api/v1/kk5lndxyczkh1?sheet=Formulaire" method="post" id="sheetdb-form" class="main" onsubmit="return validateForm()">
+                <div class="TopBar">
+                    <div class="LeftTopBar">
+                        <div class="Titre">
+                            <p class="TitreTop">#<span>Binationaux</span>2024</p>
+                            <p class="TitreBottom">ThinkTank</p>
+                        </div>     
+                    </div>
+                    <div class="RightTopBar">
+                        <img src="../images/drapeauSenegale.png" alt="">
+                        <img src="../images/drapeauFrance.png" alt=""> 
+                    </div>
+                </div>
+                <div class="BodyMain">
+                    <div class="BoxLeftForm">
+                        <p class="PhraseForm">Le <span class="SpanColor">développement</span> du <span class="SpanColor">Sénégal</span> est <span class="SpanColor">l'histoire</span> de tous !</p>
+                        <div class="Description">
+                            <p>Participez de manière structurée audéveloppement du Sénégal en proposant des mesures innovantes ! </p>
+                        </div>
+                    </div>
+                    <div class="BoxRightForm">
+                        <p class="ReponseObligatoire">* Toute les réponses sont obligatoires</p>
+                        <p class="TitreForm">Avez-vous une pièce d'identité sénégalaise ?<span class="SpanInput">*</span></p>
+                        <div class="Radio">
+                            <label for="" class="form-control2">
+                                <input class="Question2" type="radio" name="data[PieceIdentite]" id="Oui" value="Oui" required> Oui
+                            </label>
+                            <label for="" class="form-control2">
+                                <input class="Question2" type="radio" name="data[PieceIdentite]" id="Non" value="Non"> Non
+                            </label>
+                            
+                        </div>
+                        <div class="FormNom">
+                            <div class="Prenom">
+                                <p class="titreInput">Prénom<span class="SpanInput">*</span></p>
+                                <input type="text" placeholder="Moussa" name="data[Prenom]" class="Input" id="prenom" required>
+                            </div>
+                            <div class="Nom">
+                                <p class="titreInput">Nom<span class="SpanInput">*</span></p>
+                                <input type="text" placeholder="N'Diaye" name="data[Nom]" class="Input" id="nom" required>
+                            </div>
+                        </div>
+                        <div class="Ville">
+                            <p class="titreInput">Ville<span class="SpanInput">*</span></p>
+                            <input type="text" placeholder="Paris" name="data[Ville]" class="Input" id="ville" required>
+                        </div>
+                        <div class="Ville">
+                            <p class="titreInput">Pays<span class="SpanInput">*</span></p>
+                            <input type="text" placeholder="France" name="data[Pays]" class="Input" id="pays" required>
+                        </div>
+                        <div class="Age">
+                            <p class="titreInput">Age<span class="SpanInput">*</span></p>
+                            <input type="number" placeholder="28" name="data[Age]" class="Input" id="age" required>
+                        </div>
+                        <div class="Portable">
+                            <p class="titreInput">Portable<span class="SpanInput">*</span></p>
+                            <div class="InputPortable">
+                                <select name="" id="country" onchange="country_code()">
+                                    <option value="fr">&#x1F1EB;&#x1F1F7;</option>
+                                    <option value="be">&#x1F1E7;&#x1F1EA;</option>
+                                    <option value="it">&#x1F1EE;&#x1F1F9;</option>
+                                    <option value="es">&#x1F1EA;&#x1F1F8;</option>
+                                    <option value="sn">&#x1F1F8;&#x1F1F3;</option>
+                                    <option value="uk">&#x1F1EC;&#x1F1E7;</option>
+                                    <option value="us">&#x1F1FA;&#x1F1F8;</option>
+                                    <option value="de">&#x1F1E9;&#x1F1EA;</option>
+                                    <option value="ch">&#x1F1E8;&#x1F1F3;</option>
+                                    <option value="ru">&#x1F1F7;&#x1F1FA;</option>
+                                    <option value="in">&#x1F1EE;&#x1F1F3;</option>
+                                    <option value="autre">autre</option>
+                                </select>
+                                <input type="tel" placeholder="+33" name="data[Numero]" class="PhoneNumber" id="phone" required>
+                            </div>
+                            
+                        </div>
+                        <div class="Email">
+                            <p class="titreInput">Email<span class="SpanInput">*</span></p>
+                            <input type="email" placeholder="moussandiaye@gmail.com" name="data[Email]" class="Input" id="email" required>
+                        </div>
+                        <div class="Btn">
+                            <button type="submit">
+                                Adhérer
+                            </button>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section>
+            <div class="Footer">
+                <div class="FooterContent">
+
+                    <div class="TopFooter">
+
+                        <div class="LeftFooterBar">
+                            <div class="TitreFooter">
+                                <p class="TitreTopFooter">#<span>Binationaux</span>2024</p>
+                                <p class="TitreBottomFooter">ThinkTank</p>
+                            </div>
+                        </div>
+                        
+                        <div class="Links">
+                            <a href="">Accueil</a>
+                            <a href="">Contact</a>
+                        </div>
+
+                    </div>
+
+
+
+                    <!---------------  Footer Big Screen  ------------->
+
+                </div>
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./Formulaire.js" async defer></script>
+        <script>
+            let prenom = document.getElementById("prenom").value;
+            let nom = document.getElementById("nom").value;
+            let ville = document.getElementById("ville").value;
+            let pays = document.getElementById("pays").value;
+            let age = document.getElementById("age").value;
+            let numero = document.getElementById("prenom").value;
+            let email = document.getElementById("email").value;
+            let piece = document.getElementById("prenom").value;
+            let oui = document.getElementById("Oui").value;
+            let non = document.getElementById("Non").value;
+            
+        
+            
+            var form = document.getElementById('sheetdb-form');
+
+            form.addEventListener("submit", e => {
+                    e.preventDefault();
+                    fetch(form.action, {
+                        method : "POST",
+                        body : new FormData(document.getElementById("sheetdb-form")),
+                    }).then(
+                        response => response.json()
+                    ).then((html) => {
+                        window.open('../Success/Success.html', '_self');
+                    });
+            });
+
+            
+            
+           
+
+
+        
+        </script>
+        <script src=”build/js/intlTelInput.js”></script>
+
+    </body>
+</html>
