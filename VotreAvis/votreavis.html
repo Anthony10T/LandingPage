@@ -35,21 +35,25 @@
                 </div>
                 <div class="Formulaire">
                     <form class="BoxFormulaire" method="post" id="sheetdb-form" action="https://sheetdb.io/api/v1/kk5lndxyczkh1?sheet=Avis">
-                        <p class="QuestionForm">Quelles sont les problématiques liées à la diaspora à traiter en priorité ? </p>
+                        <p class="QuestionForm">Quelles sont les problématiques structurelles à traiter en priorité ? </p>
                         <label for="" class="form-control">
-                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="La Corrution"> La Corrution
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="La Corrution">1. La Corrution
                         </label>
                         <label for="" class="form-control">
-                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="La Communication Gouvernementale"> La Communication Gouvernementale
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="2" value="La Corrution">2. La Souveraineté monétaire
                         </label>
                         <label for="" class="form-control">
-                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="Les Litiges Foncier"> Les Litiges Foncier
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="3" value="La Communication Gouvernementale">3. La Communication Gouvernementale
                         </label>
                         <label for="" class="form-control">
-                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="Le Financement"> Le Financement
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="4" value="Les Litiges Foncier">4. Les Litiges Foncier
                         </label>
                         <label for="" class="form-control">
-                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="" value="Autre"> Autre
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="5" value="Le Financement">5. Le Financement
+                        </label>
+                        <label for="" class="form-control" style="display: flex;align-items:center;">
+                            <input class="Question1" type="radio" name="data[Quelles sont les problématiques liées à la diaspora à traiter en priorité ?]" id="autre" value="Autre"> Autre
+                            <input type="text" id="BoxText" placeholder="Entrer votre proposition..." >
                         </label>
                         
                         <p class="QuestionForm2">Avez-vous déja subi un litige foncier ?</p>
@@ -67,8 +71,17 @@
                         </button>
                     </form>
                 </div>
+                <div class="Recommendations">
+                    <form class="InputRecommendation" method="post" id="sheetdb-form2" action="https://sheetdb.io/api/v1/kk5lndxyczkh1?sheet=Recommendation">
+                        <input type="text" id="" placeholder="Laisser une recommendation..." name="data[Recommendation]">
+                        <button type="submit"> Envoyer </button>
+                    </form>
+                </div>
+                
             </div>
         </section>
+
+
 
 
         <section>
@@ -85,7 +98,8 @@
                         </div>
                         
                         <div class="Links">
-                            <a href="">Accueil</a>
+                            <a href="../index.html">Accueil</a>
+                            <a href="mailto:thinktank@binationaux2024.com">Contact</a>
                         </div>
 
                     </div>
@@ -97,6 +111,28 @@
         
         
         <script src="./index.js" async defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            document.getElementById("autre").addEventListener('click', function(){
+                document.getElementById('BoxText').style.display = "block";
+            })
+            document.getElementById("1").addEventListener('click', function(){
+                document.getElementById('BoxText').style.display = "none";
+            })
+            document.getElementById("2").addEventListener('click', function(){
+                document.getElementById('BoxText').style.display = "none";
+            })
+            document.getElementById("3").addEventListener('click', function(){
+                document.getElementById('BoxText').style.display = "none";
+            })
+            document.getElementById("4").addEventListener('click', function(){
+                document.getElementById('BoxText').style.display = "none";
+            })
+            document.getElementById("5").addEventListener('click', function(){
+                document.getElementById('BoxText').style.display = "none";
+            })
+
+        </script>
         <script>
            var form = document.getElementById('sheetdb-form');
            form.addEventListener("submit", e => {
@@ -111,6 +147,20 @@
             });
            });
         </script>
+        <script>
+            var form2 = document.getElementById('sheetdb-form2');
+            form2.addEventListener("submit", e => {
+             e.preventDefault();
+             fetch(form2.action, {
+                 method : "POST",
+                 body : new FormData(document.getElementById("sheetdb-form2")),
+             }).then(
+                 response => response.json()
+             ).then((html) => {
+                 window.open('./SuccesAvis.html', '_self');
+             });
+            });
+         </script>
         <script>
             
         const slider = document.querySelector(".items");
@@ -152,6 +202,12 @@
 			slides[prev].classList.add("prev");
 			slides[next].classList.add("next");
 		}
+        </script>
+        <script>
+            $('#BoxText').change(function() {
+                $('input#autre:radio').val($(this).val())
+                console.log($('input#autre:radio').val())
+            })
         </script>
     </body>
 </html>

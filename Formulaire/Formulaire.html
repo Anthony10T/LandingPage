@@ -52,38 +52,24 @@
                                 <input type="text" placeholder="N'Diaye" name="data[Nom]" class="Input" id="nom" required>
                             </div>
                         </div>
-                        <div class="Ville">
-                            <p class="titreInput">Ville<span class="SpanInput">*</span></p>
-                            <input type="text" placeholder="Paris" name="data[Ville]" class="Input" id="ville" required>
+                        <div class="FormNom">
+                            <div class="Prenom">
+                                <p class="titreInput">Pays<span class="SpanInput">*</span></p>
+                                <input type="text" placeholder="France" name="data[Pays]" class="Input" id="pays" required>
+                            </div>
+                            <div class="Prenom">
+                                <p class="titreInput">Ville<span class="SpanInput">*</span></p>
+                                <input type="text" placeholder="Paris" name="data[Ville]" class="Input" id="ville" required>
+                            </div>
                         </div>
-                        <div class="Ville">
-                            <p class="titreInput">Pays<span class="SpanInput">*</span></p>
-                            <input type="text" placeholder="France" name="data[Pays]" class="Input" id="pays" required>
-                        </div>
+                        
                         <div class="Age">
                             <p class="titreInput">Age<span class="SpanInput">*</span></p>
                             <input type="number" placeholder="28" name="data[Age]" class="Input" id="age" required>
                         </div>
-                        <div class="Portable">
+                        <div class="Age">
                             <p class="titreInput">Portable<span class="SpanInput">*</span></p>
-                            <div class="InputPortable">
-                                <select name="" id="country" onchange="country_code()">
-                                    <option value="fr">&#x1F1EB;&#x1F1F7;</option>
-                                    <option value="be">&#x1F1E7;&#x1F1EA;</option>
-                                    <option value="it">&#x1F1EE;&#x1F1F9;</option>
-                                    <option value="es">&#x1F1EA;&#x1F1F8;</option>
-                                    <option value="sn">&#x1F1F8;&#x1F1F3;</option>
-                                    <option value="uk">&#x1F1EC;&#x1F1E7;</option>
-                                    <option value="us">&#x1F1FA;&#x1F1F8;</option>
-                                    <option value="de">&#x1F1E9;&#x1F1EA;</option>
-                                    <option value="ch">&#x1F1E8;&#x1F1F3;</option>
-                                    <option value="ru">&#x1F1F7;&#x1F1FA;</option>
-                                    <option value="in">&#x1F1EE;&#x1F1F3;</option>
-                                    <option value="autre">autre</option>
-                                </select>
-                                <input type="tel" placeholder="+33" name="data[Numero]" class="PhoneNumber" id="phone" required>
-                            </div>
-                            
+                            <input type="tel" placeholder="0700000000" name="data[Numero]" class="Input" id="phone" required>
                         </div>
                         <div class="Email">
                             <p class="titreInput">Email<span class="SpanInput">*</span></p>
@@ -114,8 +100,8 @@
                         </div>
                         
                         <div class="Links">
-                            <a href="">Accueil</a>
-                            <a href="">Contact</a>
+                            <a href="../index.html">Accueil</a>
+                            <a href="mailto:thinktank@binationaux2024.com">Contact</a>
                         </div>
 
                     </div>
@@ -131,19 +117,8 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="./Formulaire.js" async defer></script>
         <script>
-            let prenom = document.getElementById("prenom").value;
-            let nom = document.getElementById("nom").value;
-            let ville = document.getElementById("ville").value;
-            let pays = document.getElementById("pays").value;
-            let age = document.getElementById("age").value;
-            let numero = document.getElementById("prenom").value;
-            let email = document.getElementById("email").value;
-            let piece = document.getElementById("prenom").value;
-            let oui = document.getElementById("Oui").value;
-            let non = document.getElementById("Non").value;
-            
-        
-            
+
+
             var form = document.getElementById('sheetdb-form');
 
             form.addEventListener("submit", e => {
@@ -157,12 +132,6 @@
                         window.open('../Success/Success.html', '_self');
                     });
             });
-
-            
-            
-           
-
-
         
         </script>
         <script src=”build/js/intlTelInput.js”></script>
