@@ -443,9 +443,7 @@ input[type="radio"] {
 }
 
 .InputRecommendation{
-    width:auto;
-    margin-left:40px;
-    margin-right:40px;
+    width:40%;
     display:flex;
     justify-content:center;
     margin-top: 20px;
@@ -493,6 +491,9 @@ input[type="radio"] {
 .Recommendations{
     background-color: #101010;
     padding-bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .Recommendation{
     display:inline-block;
@@ -648,7 +649,7 @@ input[type="radio"] {
 
 @media (max-width: 600px){
     .InputRecommendation{
-        width:auto;
+        width:100%;
         margin-left:20px;
         margin-right:20px;
         display:flex;
