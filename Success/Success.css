@@ -124,6 +124,20 @@
     border-style: none;
     font-size:20px;
     cursor:pointer;
+    background-color: white;
+    color: black;
+}
+.BoxImageParrainez button:hover{
+    padding-top: 20px;
+    padding-bottom:20px;
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-style: none;
+    font-size:20px;
+    cursor:pointer;
+    background-color: rgb(167, 167, 167);
+    color: black;
 }
 
 .BoxImageParrainez {
@@ -413,6 +427,18 @@ input[type="radio"] {
     border-top-right-radius: 10px;
     border-style:none;
     cursor:pointer;
+    background-color: white;
+    color: black;
+}
+.InputRecommendation button:hover{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-style:none;
+    cursor:pointer;
+    background-color: rgb(157, 157, 157);
+    color: black;
 }
 .InputRecommendation input{
     width: 100%;
