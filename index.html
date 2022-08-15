@@ -28,6 +28,10 @@
                         <p class="BigText">Un<span id="words"> Peuple</span></p>
                         <p class="SmallText">Participons de manière structuré au développement du Sénégal en proposant des mesures innovantes !</p>
                         <a class="BtnAccederForm" href="./Formulaire/Formulaire.html">Accéder au Formulaire</a>
+                        <div class="BoxSuccess">
+                            <p class="NombreAdherents" id="NombreAdherents">256</p>
+                            <p class="DescriptionAdherents">Adhérents</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,7 +76,14 @@
                 }, 2000)
             })();
         </script>
-        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+        <script>
+            axios.get('https://sheetdb.io/api/v1/kk5lndxyczkh1/count?sheet=Formulaire')
+            .then( response => {
+                console.log(response.data.rows);
+                document.getElementById('NombreAdherents').innerHTML = response.data.rows;
+            });
+        </script>
         <script src="./index.js" async defer></script>
     </body>
 </html>

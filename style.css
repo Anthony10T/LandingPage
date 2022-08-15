@@ -8,6 +8,39 @@
 .main {
     background-color: #101010;
 }
+.success{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.BoxSuccess{
+    width: 100%;
+    text-align: center;
+}
+.TitreRecu{
+    margin-top: 20px;
+    color: white;
+    font-size: 3vw;
+}
+.DescriptionRecu{
+    color: rgb(116, 116, 116);
+}
+.NombreAdherents{
+    margin-top:30px;
+    color: white;
+    font-size: 5vw;
+    text-decoration: underline;
+    text-decoration-thickness: 20px;
+    text-underline-offset: -0.3em;
+    text-decoration-skip-ink: none;
+    text-decoration-color: green;
+}
+.DescriptionAdherents{
+    font-size: 3vw;
+    color: rgb(116, 116, 116);
+}
 .TopBar {
     width: 100%;
     display: flex;
